@@ -1,5 +1,5 @@
 {
-  "name": "caseyamcl/toc",
+  "name": "ideea/toc",
   "type": "library",
   "description": "Simple Table-of-Contents Generator for PHP.  Generates TOCs based off H1...H6 tags",
   "keywords": ["table of contents", "toc"],
