@@ -87,7 +87,7 @@ class TocGenerator
         foreach ($this->traverseHeaderTags($domDocument, $topLevel, $depth) as $node) {
 
             // Skip items without IDs
-            if ( ! $node->hasAttribute('id')) {
+            if ( ! $node->hasAttribute('data-section')) {
                 continue;
             }
 
@@ -117,7 +117,7 @@ class TocGenerator
 
             $lastElem = $parent->addChild(
                 $node->getAttribute('title') ?: $node->textContent,
-                ['uri' => '#' . $node->getAttribute('id')]
+                ['uri' => '#' . $node->getAttribute('data-section')]
             );
         }
 
