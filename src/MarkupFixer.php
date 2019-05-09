@@ -72,7 +72,7 @@ class MarkupFixer
                 continue;
             }
 
-            $node->setAttribute('id', $sluggifier->slugify($node->getAttribute('title') ?: $node->textContent));
+            $node->setAttribute('data-section', $sluggifier->slugify($node->getAttribute('title') ?: $node->textContent));
         }
 
         return $this->htmlParser->saveHTML((isset($partialID)) ? $domDocument->getElementById($partialID)->childNodes : $domDocument);
